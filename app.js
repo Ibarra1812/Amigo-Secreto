@@ -39,4 +39,5 @@ function sortearAmigo() {
     indiceRamdom = Math.floor(Math.random() * amigos.length);
     asignarTextoElemento('#resultado', `El amigo secreto es ${amigos[indiceRamdom]}`);
     listaAmigos.innerHTML = '';
+    amigos= [];
 }
