@@ -18,3 +18,11 @@ function agregarAmigo() {
     
     document.querySelector('#amigo').value = '';
 }
+
+function mostrarAmigos() {
+    listaAmigos = document.querySelector('#listaAmigos');
+    listaAmigos.innerHTML = '';
+    for (let i = 0; i < amigos.length; i++) {
+        listaAmigos.innerHTML += `<li>${amigos[i]}</li>`;
+    }
+}
