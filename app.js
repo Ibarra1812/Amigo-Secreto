@@ -15,7 +15,8 @@ function agregarAmigo() {
     }
     
     amigos.push(nombre);
-    
+    alert(`Amigo ${nombre} agregado con éxito`);
+    mostrarAmigos();
     document.querySelector('#amigo').value = '';
 }
 
@@ -25,4 +26,14 @@ function mostrarAmigos() {
     for (let i = 0; i < amigos.length; i++) {
         listaAmigos.innerHTML += `<li>${amigos[i]}</li>`;
     }
+}
+
+function sortearAmigo() {
+    // Verifica si no es null o vacío
+    if (amigos.length === 0) {
+        alert('Por favor, inserte al menos un amigo');
+        return;
+    }
+    indiceRamdom = Math.floor(Math.random() * amigos.length);
+    asignarTextoElemento('#resultado', `El amigo secreto es ${amigos[indiceRamdom]}`);
 }
